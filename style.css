@@ -4,13 +4,19 @@ body {
     height: 100vh;
     border: 1px solid black; /*take out later*/
 }
+.logo {
+    float: left;
+}
 .jumbotron {
     text-align: center;
 }
-.logo {
-    float: left;
+.header {
+    text-align: center;
 }
 .lavender {
     background: lavender;
     border: 1px solid black;
+}
+.card {
+    height: 210px;
 }
