@@ -20,3 +20,12 @@ body {
 .card {
     height: 210px;
 }
+.front {
+    background: pink;
+}
+.back {
+    background: rgb(154, 121, 173);
+}
+.reveal {
+    display: none;
+}
