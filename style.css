@@ -11,13 +11,10 @@ body {
     width: 100px;
     height: 100px;
 }
-.jumbotron {
-    text-align: center;
-}
 .header {
     text-align: center;
 }
-.lavender {
+.lavender {                     /*take out later*/
     background: lavender;
     border: 1px solid black;
 }
