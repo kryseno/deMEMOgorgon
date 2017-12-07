@@ -7,6 +7,10 @@ body {
 .logo {
     float: left;
 }
+.logo img {
+    width: 100px;
+    height: 100px;
+}
 .jumbotron {
     text-align: center;
 }
