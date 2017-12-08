@@ -7,6 +7,7 @@ function initializeApp (){
 
 function handleCardClick (){
     console.log('card clicked', this);
-    const back = $(this).find('.back');
+    $(this).find('.front').removeClass('remove');
+    console.log('front card revealed');
 }
 
