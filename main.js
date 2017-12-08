@@ -11,12 +11,19 @@ function initializeApp (){
 function handleCardClick (){
     console.log('card clicked', this);
     $(this).find('.front').removeClass('remove');
-    console.log('1st front card revealed');
 
     if(first_card_clicked === null){
         first_card_clicked = this;
+        console.log('first card clicked this: ', this);
     } else {
         second_card_clicked = this;
+        console.log('second card clicked this: ', this);
+        
+        if($(first_card_clicked).find("img").attr("src") === $(second_card_clicked).find("img").attr("src")){
+            console.log('issa match!');
+        } else {
+            console.log('issa NOT a match!');
+        }
     }
 }
 
