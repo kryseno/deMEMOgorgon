@@ -21,8 +21,12 @@ function handleCardClick (){
         
         if($(first_card_clicked).find("img").attr("src") === $(second_card_clicked).find("img").attr("src")){
             console.log('issa match!');
+            first_card_clicked = null;
+            second_card_clicked = null;
         } else {
             console.log('issa NOT a match!');
+            first_card_clicked = null;
+            second_card_clicked = null;
         }
     }
 }
