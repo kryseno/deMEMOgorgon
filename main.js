@@ -14,6 +14,7 @@ function handleCardClick(){
     if(first_card_clicked === null){
         first_card_clicked = this;
         console.log('first card: ',first_card_clicked);
+        return
     } else {
         second_card_clicked = this;
         console.log('second card: ',second_card_clicked);
@@ -25,8 +26,8 @@ function handleCardClick(){
             second_card_clicked = null;
         } else {
             console.log('issa NOT a match!');
-            $(first_card_clicked).find('.front').addClass('remove');
-            $(second_card_clicked).find('.front').addClass('remove');
+            // $(first_card_clicked).find('.front').addClass('remove');
+            // $(second_card_clicked).find('.front').addClass('remove');
             first_card_clicked = null;
             second_card_clicked = null;
         }
