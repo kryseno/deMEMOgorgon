@@ -27,9 +27,16 @@ function handleCardClick(){
         } else {
             console.log('issa NOT a match!');
             // $(first_card_clicked).find('.front').addClass('remove');
+            // first_card_clicked = null;
             // $(second_card_clicked).find('.front').addClass('remove');
-            first_card_clicked = null;
-            second_card_clicked = null;
+            // second_card_clicked = null;
+            var timeOut = setTimeout(function () {
+                $(first_card_clicked).find('.front').addClass('remove');
+                first_card_clicked = null;
+                $(second_card_clicked).find('.front').addClass('remove');
+                second_card_clicked = null;
+            }, 2000);
+            return timeOut;
         }
     }
 }
