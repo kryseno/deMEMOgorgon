@@ -1,5 +1,9 @@
 let first_card_clicked = null;
 let second_card_clicked = null;
+const cardImgs = [
+    'images/demogorgon.jpg',
+    'images/eleven.jpg'
+];
 
 $(document).ready(initializeApp);
 
