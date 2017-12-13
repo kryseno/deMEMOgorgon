@@ -57,6 +57,10 @@ function handleCardClick(){
         second_card_clicked = this;
         console.log('second card clicked: ',second_card_clicked);
         allow_card_click = false;
+        if(first_card_clicked === second_card_clicked){
+            console.log('cannot choose same card!!');
+            return
+        }
         if($(first_card_clicked).find("img").attr("src") === $(second_card_clicked).find("img").attr("src")){
             console.log('issa match!');
             var timeOut = setTimeout(function () {
@@ -87,5 +91,9 @@ function handleCardClick(){
             console.log('before return timeOut');
             return timeOut;
         }
+    }
+    if(first_card_clicked === second_card_clicked){
+        console.log('cannot choose same card!!');
+        return
     }
 }
