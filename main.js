@@ -2,7 +2,11 @@ let first_card_clicked = null;
 let second_card_clicked = null;
 const cardImgs = [
     'images/demogorgon.jpg',
-    'images/eleven.jpg'
+    'images/eleven.jpg',
+    'images/demogorgon.jpg',
+    'images/demogorgon.jpg',
+    'images/demogorgon.jpg',
+    'images/demogorgon.jpg',
 ];
 
 $(document).ready(initializeApp);
@@ -15,21 +19,23 @@ function initializeApp(){
 
 function displayCards(){
     console.log('displaying cards');
-    for(let i=0; i<cardImgs.length; i++){
+    for(let row=0; row<6; row++){
         const makeCardRow = $("<div>").addClass("row");
-        const makeCardCols = $("<div>").addClass("col-lg-2 col-mg-2 col-sm-2 col-xs-2");
-        const rowCard = $("<div>").addClass("row card");
-        const frontCardCol = $("<div>").addClass("col-lg-12 col-mg-12 col-sm-12 col-xs-12 front remove");
-        const backCardCol = $("<div>").addClass("col-lg-12 col-mg-12 col-sm-12 col-xs-12 back");
-        const frontImg = $("<img>").attr("src", cardImgs[i]);
-        const backImg = $("<img>").attr("src", "images/strangerThingsCard.jpg");
-        $(frontCardCol).append(frontImg);
-        $(backCardCol).append(backImg);
-        $(rowCard).append(frontCardCol);
-        $(rowCard).append(backCardCol);
-        $(makeCardCols).append(rowCard);
-        $(makeCardRow).append(makeCardCols);
-        $("#game-area").append(makeCardRow);
+        for(let cardElem=0; cardElem<cardImgs.length; cardElem++){
+            const makeCardCols = $("<div>").addClass("col-lg-2 col-mg-2 col-sm-2 col-xs-2");
+            const rowCard = $("<div>").addClass("row card");
+            const frontCardCol = $("<div>").addClass("col-lg-12 col-mg-12 col-sm-12 col-xs-12 front remove");
+            const backCardCol = $("<div>").addClass("col-lg-12 col-mg-12 col-sm-12 col-xs-12 back");
+            const frontImg = $("<img>").attr("src", cardImgs[row]);
+            const backImg = $("<img>").attr("src", "images/strangerThingsCard.jpg");
+            $(frontCardCol).append(frontImg);
+            $(backCardCol).append(backImg);
+            $(rowCard).append(frontCardCol);
+            $(rowCard).append(backCardCol);
+            $(makeCardCols).append(rowCard);
+            $(makeCardRow).append(makeCardCols);
+            $("#game-area").append(makeCardRow);
+        }
     }
 }
 
