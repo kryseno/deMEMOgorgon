@@ -19,7 +19,7 @@ function initializeApp(){
 
 function displayCards(){
     console.log('displaying cards');
-    for(let row=0; row<6; row++){
+    for(let row=0; row<3; row++){
         const makeCardRow = $("<div>").addClass("row");
         for(let cardElem=0; cardElem<cardImgs.length; cardElem++){
             const makeCardCols = $("<div>").addClass("col-lg-2 col-mg-2 col-sm-2 col-xs-2");
