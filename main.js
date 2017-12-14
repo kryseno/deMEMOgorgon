@@ -66,8 +66,8 @@ function handleCardClick(){
             var timeOut = setTimeout(function () {
                 console.log('inside timeOut function');
                 $(first_card_clicked).addClass('remove');
-                first_card_clicked = null;
                 $(second_card_clicked).addClass('remove');
+                first_card_clicked = null;
                 second_card_clicked = null;
                 allow_card_click = true;    
                 console.log('clicking cards now permitted');
