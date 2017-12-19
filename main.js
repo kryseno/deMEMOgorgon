@@ -39,10 +39,14 @@ function displayCards(){
             $("#game-area").append(makeCardRow);
         }
     }
+    function flip() {
+        $(this).addClass('flipped');
+    }
 }
 
 function handleCardClick(){
     if(!allow_card_click){
+        $(this).removeClass('flipped');
         console.log('cards have already been clicked! WAIT');
         return
     }
@@ -97,8 +101,4 @@ function handleCardClick(){
         console.log('cannot choose same card!!');
         return
     }
-}
-
-function flip() {
-    $(this).toggleClass('flipped');
 }
