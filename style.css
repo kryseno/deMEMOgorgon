@@ -4,6 +4,8 @@ body {
     height: 100vh;
     border: 1px solid black; /*take out later*/
 }
+
+/*********** HEADER AREA ***********/
 .logo {
     float: left;
 }
@@ -18,6 +20,8 @@ body {
     background: lavender;
     border: 1px solid black;
 }
+
+/*********** GAME AREA ***********/
 #game-area {
     cursor: crosshair;
 }
