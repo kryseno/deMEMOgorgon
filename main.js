@@ -19,10 +19,6 @@ function initializeApp(){
     $(".card").click(handleCardClick);
 }
 
-function flip() {
-    $(this).toggleClass('flipped');
-}
-
 function displayCards(){
     console.log('displaying cards');
     for(let row=0; row<3; row++){
@@ -84,8 +80,9 @@ function handleCardClick(){
             console.log('before timeOut');
             var timeOut = setTimeout(function () {
                 console.log('inside timeOut function');
-                $(first_card_clicked).find('.front').addClass('remove');
-                $(second_card_clicked).find('.front').addClass('remove');
+                $(first_card_clicked).removeClass('flipped').find('.front').addClass('remove');
+                $(second_card_clicked).removeClass('flipped').find('.front').addClass('remove');
+                console.log('cards should be flipped now');
                 first_card_clicked = null;
                 second_card_clicked = null;
                 allow_card_click = true;  
@@ -100,4 +97,8 @@ function handleCardClick(){
         console.log('cannot choose same card!!');
         return
     }
+}
+
+function flip() {
+    $(this).toggleClass('flipped');
 }
