@@ -64,6 +64,7 @@ function handleCardClick(){
         
         if(first_card_clicked === second_card_clicked){
             console.log('cannot choose same card!!');
+            allow_card_click = true;
             return
         }
 
