@@ -19,13 +19,17 @@ function initializeApp(){
     $(".card").click(handleCardClick);
 }
 
+function flip() {
+    $(this).toggleClass('flipped');
+}
+
 function displayCards(){
     console.log('displaying cards');
     for(let row=0; row<3; row++){
-        const makeCardRow = $("<div>").addClass("row");
+        const makeCardRow = $("<div>").addClass("row cardContainer");
         for(let cardElem=0; cardElem<cardImgs.length; cardElem++){
             const makeCardCols = $("<div>").addClass("col-lg-2 col-mg-2 col-sm-2 col-xs-2");
-            const rowCard = $("<div>").addClass("row card");
+            const rowCard = $("<div>").addClass("row card").click(flip);
             const frontCardCol = $("<div>").addClass("col-lg-12 col-mg-12 col-sm-12 col-xs-12 front remove");
             const backCardCol = $("<div>").addClass("col-lg-12 col-mg-12 col-sm-12 col-xs-12 back");
             const frontImg = $("<img>").attr("src", cardImgs[row]);
