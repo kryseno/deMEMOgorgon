@@ -72,10 +72,8 @@ function handleCardClick(){
             console.log('issa match!');
             var timeOut = setTimeout(function () {
                 console.log('inside timeOut function');
-                // $(first_card_clicked).addClass('remove');
-                // $(second_card_clicked).addClass('remove');
-                $(first_card_clicked).fadeOut();
-                $(second_card_clicked).fadeOut();
+                $(first_card_clicked).addClass('animated fadeOut');
+                $(second_card_clicked).addClass('animated fadeOut');
                 first_card_clicked = null;
                 second_card_clicked = null;
                 allow_card_click = true;    
