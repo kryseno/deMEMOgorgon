@@ -56,13 +56,13 @@ function handleCardClick(){
     if(first_card_clicked === null){
         first_card_clicked = this;
         console.log('first card clicked: ',first_card_clicked);
-        $(this).unbind("click");
+        $(first_card_clicked).unbind("click");
         console.log('first card click disabled with unbind');
         return
     } else {
         second_card_clicked = this;
         console.log('second card clicked: ',second_card_clicked);
-        $(this).unbind("click");
+        $(second_card_clicked).unbind("click");
         console.log('second card click disabled with unbind');
         allow_card_click = false;
         
