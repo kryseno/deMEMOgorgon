@@ -56,10 +56,15 @@ function handleCardClick(){
     if(first_card_clicked === null){
         first_card_clicked = this;
         console.log('first card clicked: ',first_card_clicked);
+        $(first_card_clicked).unbind("click");
+        console.log('first card click disabled with unbind');
         return
     } else {
         second_card_clicked = this;
         console.log('second card clicked: ',second_card_clicked);
+        $(second_card_clicked).unbind("click");
+        console.log('second card click disabled with unbind');
+        // FIX BUG, SOME CARDS NOT CLICKABLE AFTER MATCH
         allow_card_click = false;
         
         if(first_card_clicked === second_card_clicked){
