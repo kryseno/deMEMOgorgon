@@ -46,7 +46,10 @@ function displayCards(){
 
 function handleCardClick(){
     if(!allow_card_click){
+        // removes 'flipped' class on other cards while 2 cards already selected
         $(this).removeClass('flipped');
+        // disable click on already flipped cards
+        
         console.log('cards have already been clicked! WAIT');
         return
     }
