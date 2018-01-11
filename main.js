@@ -64,7 +64,7 @@ function handleCardClick(){
         console.log('second card clicked: ',second_card_clicked);
         $(second_card_clicked).unbind("click");
         console.log('second card click disabled with unbind');
-        // FIX BUG, SOME CARDS NOT CLICKABLE AFTER MATCH
+        // FIX BUG, CARDS THAT HAVE BEEN SET TO .UNBIND, NO LONGER CLICKABLE ON NEXT ATTEMPTS
         allow_card_click = false;
         
         if(first_card_clicked === second_card_clicked){
