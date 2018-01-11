@@ -101,8 +101,6 @@ function handleCardClick(){
                 first_card_clicked = null;
                 second_card_clicked = null;
                 allow_card_click = true;
-                $(first_card_clicked).click(handleCardClick);
-                $(second_card_clicked).click(handleCardClick);
                 console.log('clicking cards now permitted');
                 console.log('after timeOut function');             
             }, 2000);
