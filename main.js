@@ -46,7 +46,10 @@ function displayCards(){
 
 function handleCardClick(){
     if(!allow_card_click){
+        // removes 'flipped' class on other cards while 2 cards already selected
         $(this).removeClass('flipped');
+        // disable click on already flipped cards
+        
         console.log('cards have already been clicked! WAIT');
         return
     }
@@ -56,14 +59,14 @@ function handleCardClick(){
     if(first_card_clicked === null){
         first_card_clicked = this;
         console.log('first card clicked: ',first_card_clicked);
-        $(first_card_clicked).unbind("click");
-        console.log('first card click disabled with unbind');
+        // $(first_card_clicked).unbind("click");
+        // console.log('first card click disabled with unbind');
         return
     } else {
         second_card_clicked = this;
         console.log('second card clicked: ',second_card_clicked);
-        $(second_card_clicked).unbind("click");
-        console.log('second card click disabled with unbind');
+        // $(second_card_clicked).unbind("click");
+        // console.log('second card click disabled with unbind');
         // FIX BUG, CARDS THAT HAVE BEEN SET TO .UNBIND, NO LONGER CLICKABLE ON NEXT ATTEMPTS
         allow_card_click = false;
         
@@ -97,7 +100,9 @@ function handleCardClick(){
                 console.log('cards should be flipped now');
                 first_card_clicked = null;
                 second_card_clicked = null;
-                allow_card_click = true;  
+                allow_card_click = true;
+                $(first_card_clicked).click(handleCardClick);
+                $(second_card_clicked).click(handleCardClick);
                 console.log('clicking cards now permitted');
                 console.log('after timeOut function');             
             }, 2000);
